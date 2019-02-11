@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="746235" started-at="2019-02-11T19:28:12Z" finished-at="2019-02-11T19:40:38Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="746235" started-at="2019-02-11T19:28:12Z" finished-at="2019-02-11T19:40:38Z">
+      <class name="testNGexamples.testngDataExcel">
+        <test-method status="PASS" signature="Beforesuite()[pri:0, instance:testNGexamples.testngDataExcel@3aefe5e5]" name="Beforesuite" is-config="true" duration-ms="586" started-at="2019-02-11T13:28:11Z" finished-at="2019-02-11T13:28:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Beforesuite -->
+        <test-method status="PASS" signature="Beforetest()[pri:0, instance:testNGexamples.testngDataExcel@3aefe5e5]" name="Beforetest" is-config="true" duration-ms="0" started-at="2019-02-11T13:28:12Z" finished-at="2019-02-11T13:28:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Beforetest -->
+        <test-method status="PASS" signature="Beforemethod()[pri:0, instance:testNGexamples.testngDataExcel@3aefe5e5]" name="Beforemethod" is-config="true" duration-ms="0" started-at="2019-02-11T13:40:19Z" finished-at="2019-02-11T13:40:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Beforemethod -->
+        <test-method status="PASS" signature="verifyData1(java.lang.String, java.lang.String)[pri:0, instance:testNGexamples.testngDataExcel@3aefe5e5]" name="verifyData1" duration-ms="13699" started-at="2019-02-11T13:40:19Z" data-provider="getDatafromexcel" finished-at="2019-02-11T13:40:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[kartik]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[India]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyData1 -->
+        <test-method status="PASS" signature="aftermethod()[pri:0, instance:testNGexamples.testngDataExcel@3aefe5e5]" name="aftermethod" is-config="true" duration-ms="16" started-at="2019-02-11T13:40:33Z" finished-at="2019-02-11T13:40:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method status="PASS" signature="Beforemethod()[pri:0, instance:testNGexamples.testngDataExcel@3aefe5e5]" name="Beforemethod" is-config="true" duration-ms="0" started-at="2019-02-11T13:40:33Z" finished-at="2019-02-11T13:40:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Beforemethod -->
+        <test-method status="PASS" signature="verifyData1(java.lang.String, java.lang.String)[pri:0, instance:testNGexamples.testngDataExcel@3aefe5e5]" name="verifyData1" duration-ms="3392" started-at="2019-02-11T13:40:33Z" data-provider="getDatafromexcel" finished-at="2019-02-11T13:40:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Suma]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chicago]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyData1 -->
+        <test-method status="PASS" signature="Beforemethod()[pri:0, instance:testNGexamples.testngDataExcel@3aefe5e5]" name="Beforemethod" is-config="true" duration-ms="0" started-at="2019-02-11T13:40:36Z" finished-at="2019-02-11T13:40:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Beforemethod -->
+        <test-method status="PASS" signature="verifyData1(java.lang.String, java.lang.String)[pri:0, instance:testNGexamples.testngDataExcel@3aefe5e5]" name="verifyData1" duration-ms="2043" started-at="2019-02-11T13:40:36Z" data-provider="getDatafromexcel" finished-at="2019-02-11T13:40:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sudheer]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[raliegh]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyData1 -->
+        <test-method status="PASS" signature="aftermethod()[pri:0, instance:testNGexamples.testngDataExcel@3aefe5e5]" name="aftermethod" is-config="true" duration-ms="0" started-at="2019-02-11T13:40:36Z" finished-at="2019-02-11T13:40:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method status="PASS" signature="aftermethod()[pri:0, instance:testNGexamples.testngDataExcel@3aefe5e5]" name="aftermethod" is-config="true" duration-ms="0" started-at="2019-02-11T13:40:38Z" finished-at="2019-02-11T13:40:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method status="PASS" signature="aftertestisdone()[pri:0, instance:testNGexamples.testngDataExcel@3aefe5e5]" name="aftertestisdone" is-config="true" duration-ms="0" started-at="2019-02-11T13:40:38Z" finished-at="2019-02-11T13:40:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftertestisdone -->
+        <test-method status="PASS" signature="aftersuite()[pri:0, instance:testNGexamples.testngDataExcel@3aefe5e5]" name="aftersuite" is-config="true" duration-ms="1" started-at="2019-02-11T13:40:38Z" finished-at="2019-02-11T13:40:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftersuite -->
+      </class> <!-- testNGexamples.testngDataExcel -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
