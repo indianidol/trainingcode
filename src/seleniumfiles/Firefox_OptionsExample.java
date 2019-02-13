@@ -1,10 +1,12 @@
 package seleniumfiles;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
@@ -22,8 +24,23 @@ public class Firefox_OptionsExample {
 		System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, System.getProperty("user.dir")+"\\logs\\firefox.log");
 		// binary
 		FirefoxOptions options = new FirefoxOptions();
-		options.setBinary("C:/Users/Ramkar/AppData/Local/Mozilla Firefox/firefox.exe");
+		//options.setBinary("C:/Users/Ramkar/AppData/Local/Mozilla Firefox/firefox.exe");
 		options.setPageLoadStrategy(PageLoadStrategy.EAGER);
+		
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\drivers\\geckodriver.exe");
+		File pathToBinary = new File("C:/Users/Ramkar/AppData/Local/Mozilla Firefox/firefox.exe");
+		FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
+	//	FirefoxProfile firefoxProfile = new FirefoxProfile();   
+		
+		
+		  options.addPreference("browser.startup.page", 1);
+		  options.addPreference("browser.startup.homepage", "https://www.rediff.com");
+		  options.setBinary(ffBinary);
+			      
+		 
+		 
+		
+		
 		
 		// Profiling--firefox.exe -p profilemanager
 		// tell selenium to launch mod -11
