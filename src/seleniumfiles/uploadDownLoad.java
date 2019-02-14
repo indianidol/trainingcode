@@ -1,24 +1,22 @@
 package seleniumfiles;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxBinary;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class uploadDownLoad {
 	public static void main(String[] args) throws InterruptedException {
-		// uploadFiles();
-		downLoad();
+	//	 uploadFiles();
+		downLoadchrome();
 	}
 
 	private static void uploadFiles() {
@@ -39,7 +37,7 @@ public class uploadDownLoad {
 		driver.findElement(By.name("send")).click();
 	}
 
-	private static void downLoad() throws InterruptedException {
+	private static void downLoadFF() throws InterruptedException {
 		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\drivers\\geckodriver.exe");
 		String baseUrl ="https://templates.office.com/en-us/Loan-calculator-TM03986985";
 				//"http://file-examples.com/index.php/sample-documents-download/sample-doc-download/";
@@ -52,14 +50,13 @@ public class uploadDownLoad {
 		////a[@href='http://www.hdfcbank.com/assets/pdf/Combined_Address_Change_Form.pdf']
 		
 		
-		FirefoxOptions options = new FirefoxOptions();
+		
 		//options.setBinary("C:/Users/Ramkar/AppData/Local/Mozilla Firefox/firefox.exe");
-		options.setPageLoadStrategy(PageLoadStrategy.EAGER);
+		//options.setPageLoadStrategy(PageLoadStrategy.EAGER);
 		
 
-		File pathToBinary = new File("C:/Users/Ramkar/AppData/Local/Mozilla Firefox/firefox.exe");
-		FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
-	FirefoxProfile profile = new FirefoxProfile();
+		
+		FirefoxProfile profile = new FirefoxProfile();
 	
 
 	profile.setPreference("browser.download.folderList", 2);
@@ -67,7 +64,7 @@ public class uploadDownLoad {
 	//https://www.freeformatter.com/mime-types-list.html
 		
 	
-/*	profile.setPreference("browser.download.manager.showWhenStarting", false);
+	/*profile.setPreference("browser.download.manager.showWhenStarting", false);
 	profile.setPreference("browser.download.manager.showAlertOnComplete", false);
 
 	profile.setPreference("browser.helperApps.neverAsk.saveToDisk","application/octet-stream, application/vnd.openxmlformats-officedocument.spreadsheetml.template, application/x-unknown, application/javascript"); 
@@ -76,19 +73,22 @@ public class uploadDownLoad {
 	
 	/*profile.setPreference("browser.helperApps.alwaysAsk.force", false);
 	profile.setPreference("browser.download.manager.showWhenStarting",false);*/
-	
-	options.setProfile(profile);
+	FirefoxOptions options = new FirefoxOptions();
+	//options.setProfile(profile);
 	//options.addPreference(key, value)
 	
-/*	options.addPreference("browser.download.folderList", 2);
+	options.addPreference("browser.download.folderList", 2);
 	options.addPreference("browser.download.dir", System.getProperty("user.dir") + File.separator + "externalFiles");
 	options.addPreference("browser.download.useDownloadDir", true);
-	options.addPreference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream");*/
+	options.addPreference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream");
 //	options.addPreference("pdfjs.disabled", true);
 
 		
 		 // options.addPreference("browser.startup.page", 1);
 		//  options.addPreference("browser.startup.homepage", "https://www.rediff.com");
+/*
+	File pathToBinary = new File("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+	FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
 	options.setBinary(ffBinary);
 		//a[text()='Download sample DOC file'][1]
 		
@@ -109,23 +109,32 @@ public class uploadDownLoad {
 		WebElement downloadElement = driver.findElement(By.xpath("//a[@data-app='Excel']"));
 		
 		downloadElement.click();
-		
-		/*ChromeOptions ops = new ChromeOptions();
-
-		// Setting new download directory path
-		Map<String, Object> prefs = new HashMap<String, Object>();
-
-		// Use File.separator as it will work on any OS
-		prefs.put("download.default_directory", System.getProperty("user.dir") + File.separator + "externalFiles");
-
-		ops.setExperimentalOption("prefs", prefs);
-
-		WebDriver driver = new ChromeDriver(ops);
-
+		*/
 	
-	//	WebElement downloadElement = driver.findElement(By.xpath("//a[@data-app='Excel']"));
-		driver.get(baseUrl);
-		downloadElement.click();
-*/
+	}
+	
+	private static void downLoadchrome() throws InterruptedException {
+		String baseUrl ="https://templates.office.com/en-us/Loan-calculator-TM03986985";	
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\drivers\\chromedriver.exe");
+		ChromeOptions ops = new ChromeOptions();
+
+			// Setting new download directory path
+			Map<String, Object> prefs = new HashMap<String, Object>();
+
+			// Use File.separator as it will work on any OS
+			prefs.put("download.default_directory", System.getProperty("user.dir") + File.separator + "externalFiles");
+
+			ops.setExperimentalOption("prefs", prefs);
+
+			WebDriver driver = new ChromeDriver(ops);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.get(baseUrl);
+
+		
+			WebElement downloadElement = driver.findElement(By.xpath("//a[@data-app='Excel']"));
+			
+			downloadElement.click();
+	
 	}
 }
+	

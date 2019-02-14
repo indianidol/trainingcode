@@ -31,10 +31,10 @@ public class Chrome_Options {
 
 	
 
-		// ops.addArguments("--disable-notifications");
+		 //ops.addArguments("--disable-notifications");
 		// ops.addArguments("disable-infobars");
-		ops.addArguments("--start-maximized");
-		// ops.setHeadless(true);
+		//ops.addArguments("--start-maximized");
+		 ops.setHeadless(true);
 		// ops.addArguments("--proxy-server=http://83.209.94.87:8123");
 		// ops.addArguments("user-data-dir=C:\\Users\\lenovo\\AppData\\Local\\Google\\Chrome\\User
 		// Data\\Profile 1\\");// Dont give default folder

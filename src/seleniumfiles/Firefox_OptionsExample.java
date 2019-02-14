@@ -28,7 +28,7 @@ public class Firefox_OptionsExample {
 		options.setPageLoadStrategy(PageLoadStrategy.EAGER);
 		
 		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\drivers\\geckodriver.exe");
-		File pathToBinary = new File("C:/Users/Ramkar/AppData/Local/Mozilla Firefox/firefox.exe");
+		File pathToBinary = new File("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
 		FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
 	//	FirefoxProfile firefoxProfile = new FirefoxProfile();   
 		
@@ -44,13 +44,13 @@ public class Firefox_OptionsExample {
 		
 		// Profiling--firefox.exe -p profilemanager
 		// tell selenium to launch mod -11
-		/*ProfilesIni allProf = new ProfilesIni();// all profiles on pc
-		FirefoxProfile prof = allProf.getProfile("Mod11");
+		ProfilesIni allProf = new ProfilesIni();// all profiles on pc
+		FirefoxProfile prof = allProf.getProfile("testProfile");
 		// notifications
 		prof.setPreference("dom.webnotifications.enabled", false);// turn off
 		// certificate
 		prof.setAcceptUntrustedCertificates(true);
-		prof.setAssumeUntrustedCertificateIssuer(false);*/
+		prof.setAssumeUntrustedCertificateIssuer(false);
 		
 		//proxy servers
 /*		prof.setPreference("network.proxy.type", 1);
@@ -62,6 +62,12 @@ public class Firefox_OptionsExample {
 	    
 		WebDriver driver = new FirefoxDriver(options);// launching browser
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		try {
+			Thread.sleep(5000l);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.get("https://www.google.com");
 		
 		
