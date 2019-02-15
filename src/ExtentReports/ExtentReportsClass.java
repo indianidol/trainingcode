@@ -39,7 +39,8 @@ public class ExtentReportsClass {
                 // Name of the report
 		htmlReporter.config().setReportName("Name of the Report Comes here "); 
                 // Dark Theme
-		htmlReporter.config().setTheme(Theme.STANDARD);			
+		htmlReporter.config().setTheme(Theme.DARK);			
+		
 	}
 	
 	//This method is to capture the screenshot and return the path of the screenshot.
