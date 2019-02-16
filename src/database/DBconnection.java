@@ -31,14 +31,24 @@ public class DBconnection
 
 			ResultSet rs = conn.createStatement().executeQuery(" SELECT * from city limit 10");
 			ResultSetMetaData rsmd = (ResultSetMetaData) rs.getMetaData();
+			
+			
 			int numberOfColumns = rsmd.getColumnCount();
 			System.out.println(numberOfColumns);
+			
+			for (int i = 1; i <=numberOfColumns; i++) {
+				System.out.print(rsmd.getColumnName(i)+ "   ");
+			}
 
 			while (rs.next()) {
 
-				for (int i = 0; i < numberOfColumns; i++) {
-					System.out.println(rs.getString(i));
+				
+					//System.out.print(rsmd.getColumnName(i));
+					for (int j = 1; j <=numberOfColumns; j++) {
+					System.out.print(rs.getString(j) + "           ");
+					
 				}
+					System.out.println("");
 
 			}
 
