@@ -15,10 +15,10 @@ public class MyListener implements WebDriverEventListener {
 
         System.out.println("before FInd "+ by);
         
-      /*  Highlight the Element on which the Find.By action is taking place
+      //  Highlight the Element on which the Find.By action is taking place
         if (driver instanceof JavascriptExecutor) {
             ((JavascriptExecutor)driver).executeScript("arguments[0].style.border='4px solid yellow'", webElement);
-        }*/
+        }
     }
 
 
@@ -63,6 +63,8 @@ public class MyListener implements WebDriverEventListener {
 	@Override
 	public void beforeClickOn(WebElement arg0, WebDriver arg1) {
 		// TODO Auto-generated method stub
+		
+		System.out.println("Before Clicking on webelement" + arg0.toString());
 		
 	}
 

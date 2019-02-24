@@ -12,6 +12,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -32,7 +34,7 @@ public class ExtentReportsClass {
         	// Create an object of Extent Reports
 		extent = new ExtentReports();  
 		extent.attachReporter(htmlReporter);
-		extent.setSystemInfo("Host Name", "SoftwareTestingMaterial");
+		extent.setSystemInfo("Host Name", "Kartik Selenium Training");
        	extent.setSystemInfo("Environment", "QA");
 		extent.setSystemInfo("User Name", System.getProperty("user.name"));
 		htmlReporter.config().setDocumentTitle("Title of the Report Comes here "); 
@@ -63,13 +65,23 @@ public class ExtentReportsClass {
 		driver.get("https://www.google.com/");
 	}
 	
+	
 	@Test
 	public void verifyTitle() {
 		logger = extent.createTest("To verify Google Title");
-		Assert.assertEquals(driver.getTitle(),"Google");
+		
+		SoftAssert sa = new SoftAssert();
+		sa.assertEquals(driver.getTitle(),"Google1");
+	//	Assert.assertEquals(driver.getTitle(),"Google1");
+		
+		System.out.println("This is after hard asser");
+		
+		
+		
+		
 	}
 	
-	@Test
+	//@Test
 	public void verifyLogo() {
 		logger = extent.createTest("To verify Google Logo");
 		boolean img = driver.findElement(By.xpath("//img[@id='hplogo']")).isDisplayed();
@@ -77,6 +89,8 @@ public class ExtentReportsClass {
 		Assert.assertTrue(img);
 		logger.createNode("Image is not Present");
 		Assert.assertFalse(img);
+		
+		
 	}
 	
 	@AfterMethod

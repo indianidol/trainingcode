@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite">
+	<groups>
+		<run></run>
+		<dependencies>
+			<group depends-on="test1" name="smoke">
+				<classes>
+					<class name="class1">
+						<methods>
+							<include name=""></include>
+						</methods>
+					</class>
+					<class name="testNGexamples.testMethodsOne" />
+				</classes>
+			</group>
+			<group depends-on="" name="test1">
+				<!-- <test name="sometest"> <classes> <class name="testNGexamples.testMethodsTwo" 
+					/> </classes> </test> -->
+
+			</group>
+		</dependencies>
+	</groups>
+	<!-- <test name="Test"> <classes> <class name="seleniumfiles.BasicDrivers" 
+		/> </classes> </test> Test -->
+
+</suite> <!-- Suite -->

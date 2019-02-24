@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+
+
 /*import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -35,10 +37,16 @@ public class makemytrip {
 			
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10000l, TimeUnit.SECONDS);
+	
 		driver.get("https://flights.makemytrip.com/makemytrip/search/R/R/E/1/0/0/S/V0/BLR_BOM_20-03-2019,BOM_BLR_27-04-2019?contains=false&remove=");
+		
+		
 		WebElement Slider= driver.findElement(By.xpath("//a[@class='ui-slider-handle ui-state-default ui-corner-all']"));
-		Actions action =new  Actions(driver);
-		action.moveToElement(Slider).clickAndHold().moveByOffset(-50, 0).release().build().perform();
+		driver.findElement(By.xpath("//p[@class='modify_city_name modify_txt ng-binding']"));
+		Slider.click();
+		
+		/*Actions action =new  Actions(driver);
+		action.moveToElement(Slider).clickAndHold().moveByOffset(-50, 0).release().build().perform();*/
 	
 	
 	

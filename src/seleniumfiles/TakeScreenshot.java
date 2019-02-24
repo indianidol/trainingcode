@@ -6,6 +6,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -18,14 +19,20 @@ public class TakeScreenshot {
     public void TakeScreenShot() throws Exception{
 
 	
-		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\drivers\\geckodriver.exe");
+		/*System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\drivers\\geckodriver.exe");
 		File pathToBinary = new File("C:/Users/Ramkar/AppData/Local/Mozilla Firefox/firefox.exe");
 		 FirefoxOptions options = new FirefoxOptions();
 			FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
 		 options.setBinary(ffBinary);
-		WebDriver driver = new FirefoxDriver(options);	
+		WebDriver driver = new FirefoxDriver(options);	*/
+    	
+    	
         //goto url
 
+    	String path = System.getProperty("user.dir")+"\\drivers\\chromedriver.exe";
+		System.setProperty("webdriver.chrome.driver", path);
+		
+		WebDriver driver= new ChromeDriver();
         driver.get("https://www.chewy.com");
 
         //Call take screenshot function
