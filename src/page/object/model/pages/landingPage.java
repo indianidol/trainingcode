@@ -16,8 +16,12 @@ public class landingPage {
 
 		this.driver = driver;
 		this.wait = wait;
+		
+		//with page factory
 		PageFactory.initElements(driver, this);
 	}
+	
+	By header_Search = By.xpath("//input[@id='query search-autocomplete']");
 
 	@FindBy(xpath = "//input[@id='query search-autocomplete']")
 	public WebElement header_Search_TextBox;
@@ -45,6 +49,10 @@ public class landingPage {
 
 	public int getdefaultSugesstionCount() {
 
+		
+		//without page factory
+		//driver.findElement(header_Search).click();
+		
 		header_Search_TextBox.click();
 		wait.until(ExpectedConditions.visibilityOf(suggesstion_list));
 
