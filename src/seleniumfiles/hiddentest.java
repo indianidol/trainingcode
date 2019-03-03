@@ -18,7 +18,7 @@ public class hiddentest {
 		 driver= new ChromeDriver();	
 	     driver.manage().window().maximize();
 	     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-	     driver.get(System.getProperty("user.dir)"+"\\resources\\a.html"));
+	     driver.get(System.getProperty("user.dir")+"\\resources\\a.html");
 	     
 	     WebElement elem = driver.findElement(By.id("iskpiFilterAction"));
 	     
