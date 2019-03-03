@@ -1,4 +1,4 @@
-package page.object.model.pages;
+package page.object.model.chewy.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

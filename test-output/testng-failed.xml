@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testNGexamples.testngDataExcel">
+      <class name="page.object.model.tests.dynamicXpathTest">
         <methods>
-          <include name="Beforesuite"/>
-          <include name="Beforetest"/>
-          <include name="aftertestisdone"/>
-          <include name="aftersuite"/>
-          <include name="verifyData1"/>
+          <include name="verifyLandingpagefeatures"/>
+          <include name="initSuite"/>
+          <include name="quit"/>
+          <include name="initTest"/>
         </methods>
-      </class> <!-- testNGexamples.testngDataExcel -->
+      </class> <!-- page.object.model.tests.dynamicXpathTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -109,6 +109,8 @@ public class testngDataExcel {
 		//System.out.println("Cols are -- "+ cols);
 		
 	    Object[][] data =new Object[rows-1][cols];
+	    
+	    
 		for(int rowNum=2;rowNum<=rows;rowNum++){
 			for(int colNum=0;colNum<cols;colNum++){
 				System.out.print(xls.getCellData(testCaseName, colNum, rowNum) + " -- ");

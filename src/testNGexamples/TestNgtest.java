@@ -30,16 +30,17 @@ public class TestNgtest {
 		 
 	    }
 	 
-	    @Test(dataProvider="getdata", dependsOnMethods = {"testMethodsTwo" }, description = "This test will test this functionality ", groups = { "smoke",	"regression" }, invocationCount = 1)
+	    @Test(dataProvider="getdata")
+	    //, dependsOnMethods = {"testMethodsTwo" }, description = "This test will test this functionality ", groups = { "smoke",	"regression" }, invocationCount = 1)
 	    public void testMethodsOne(Object c1, Object c2, Object c3 ) {
-/*	    	
-	    	System.out.println(fname);
 	    	
-	    	//		System.out.println(c1 +" "+ c2+" "+c3 );
+	    //	System.out.println(fname);
 	    	
+	    			System.out.println(c1 +" "+ c2+" "+c3 );
+	   /* 	
 	        long id = Thread.currentThread().getId();
-	        System.out.println("Simple test-method One. Thread id is: " + id);
-*/	    
+	        System.out.println("Simple test-method One. Thread id is: " + id);*/
+	    
 	    	}
 	    
 	    

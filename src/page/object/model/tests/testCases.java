@@ -4,8 +4,8 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import page.object.model.pages.landingPage;
-import page.object.model.pages.loggedInHomePage;
+import page.object.model.chewy.pages.landingPage;
+import page.object.model.chewy.pages.loggedInHomePage;
 
 public class testCases  extends TestBase{
 	
