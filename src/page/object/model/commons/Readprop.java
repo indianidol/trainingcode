@@ -16,7 +16,11 @@ public class Readprop extends CommonVariables{
 			System.out.println(configProp.getProperty("url"));		
 			
 			currentUrl= configProp.getProperty("url");
-			browser= configProp.getProperty("browser");
+			browser= configProp.getProperty("browser");			
+			xlspath= System.getProperty("user.dir")+configProp.getProperty("xlsfile");
+			testDataSheet=configProp.getProperty("testDataSheet");
+			screenshotFolderPath=configProp.getProperty("ScreenShotsfolder");
+			reportpath=CommonFunctions.getcurrentdateandhour()+System.getProperty("user.dir")+configProp.getProperty("reportpath");
 			
 		} catch (Exception e) {
 			e.printStackTrace();

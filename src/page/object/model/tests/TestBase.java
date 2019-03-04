@@ -11,10 +11,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.DataProvider;
 
+import page.object.model.commons.BrowserManger;
 import page.object.model.commons.CommonVariables;
+import page.object.model.commons.ExtentManager;
 import page.object.model.commons.Readprop;
+import poiApiReader.Xls_Reader;
 import seleniumfiles.MyListener;
+
 
 public class TestBase extends CommonVariables {
 
@@ -22,53 +27,60 @@ public class TestBase extends CommonVariables {
 	public void initSuite() {
 		rp = new Readprop();
 		rp.getproperties();
+		xls = new Xls_Reader(xlspath);
 	}
+	
+	
 
 	@BeforeMethod
-	public void initTest(Method method) {
+	public void initTest(Method method) {		
+		bM = new BrowserManger();
+		currentTestCase= method.getName();
+		
+		rep = ExtentManager.getInstance(reportpath);
+		test = rep.createTest(currentTestCase);
 		
 		
-		switch	(configProp.getProperty("browser").toUpperCase()){		
-		
-		case  "CHROME":
-			
-			String path = System.getProperty("user.dir") + "\\drivers\\chromedriver.exe";
-		System.setProperty("webdriver.chrome.driver", path);
-
-		/*
-		 * EventFiringWebDriver eventHandler = new EventFiringWebDriver(driver);
-		 * MyListener eCapture = new MyListener(); // Registering with
-		 * EventFiringWebDriver // Register method allows to register our implementation
-		 * of // WebDriverEventListner to listen to the WebDriver events
-		 * eventHandler.register(eCapture); driver = eventHandler;
-		 */
-
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10000l, TimeUnit.SECONDS);
-		driver.get(configProp.getProperty("url"));
-		// driver.get(currentUrl);
-		wait = new WebDriverWait(driver, 30);
-		
-		case "FIREFOX":
-			
-			
-			System.out.println("Firefox");
-			
-		case "IE":
-		
-			System.out.println("Firefox");
-			
-		}
-
 	}
 
-	@AfterMethod
+	//@AfterMethod
 	public void quit() throws IOException {
 		driver.quit();
 		Runtime.getRuntime().exec("taskkill /im chromedriver.exe /f");
 		
 
+	}
+	@DataProvider(name = "getDatafromexcel")
+	public static Object[][] getDatafrom(){
+	return	getDatafromexcel(xls,testDataSheet);
+		
+	}
+	
+	public static Object[][] getDatafromexcel(Xls_Reader xls , String testCaseName){
+		// if the sheet is not present
+		if(! xls.isSheetExist(testCaseName)){
+			xls=null;
+			return new Object[1][0];
+		}
+		
+		
+		int rows=xls.getRowCount(testCaseName);
+		int cols=xls.getColumnCount(testCaseName);
+		//System.out.println("Rows are -- "+ rows);
+		//System.out.println("Cols are -- "+ cols);
+		
+	    Object[][] data =new Object[rows-1][cols];
+	    
+	    
+		for(int rowNum=2;rowNum<=rows;rowNum++){
+			for(int colNum=0;colNum<cols;colNum++){
+				System.out.print(xls.getCellData(testCaseName, colNum, rowNum) + " -- ");
+				data[rowNum-2][colNum] = xls.getCellData(testCaseName, colNum, rowNum);
+			}
+			//System.out.println();
+		}
+		return data;
+		
 	}
 
 }
