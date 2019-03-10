@@ -12,7 +12,7 @@ import page.object.model.chewy.pages.loggedInHomePage;
 
 public class testCases extends TestBase {
 
-	 @Test
+//	 @Test
 	public void verifyLandingpagefeatures(Method ere) {
 		 
 		 System.out.println(ere);
@@ -24,9 +24,9 @@ public class testCases extends TestBase {
 //		org.testng.Assert.assertEquals(10, lp.getdefaultSugesstionCount());
 	}
 
-//	@Test(dataProvider = "getDatafromexcel")
+	@Test(dataProvider = "getDatafromexcel")
 	public void verifyLoginfunctionality(String runMode, String username, String password, String user) {
-/*
+
 		if (runMode.equals("Y")) {
 			
 			landingPage lp = new landingPage(driver, wait);
@@ -41,7 +41,7 @@ public class testCases extends TestBase {
 		} else {
 		
 			throw new SkipException(currentTestCase + "Skipped with username  " + username);
-		}*/
+		}
 	}
 
 }
