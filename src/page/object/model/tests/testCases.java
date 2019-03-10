@@ -1,5 +1,7 @@
 package page.object.model.tests;
 
+import java.lang.reflect.Method;
+
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.testng.SkipException;
@@ -10,21 +12,23 @@ import page.object.model.chewy.pages.loggedInHomePage;
 
 public class testCases extends TestBase {
 
-	// @Test
-	public void verifyLandingpagefeatures() {
+	 @Test
+	public void verifyLandingpagefeatures(Method ere) {
+		 
+		 System.out.println(ere);
 
-		landingPage lp = new landingPage(driver, wait);
+	//	landingPage lp = new landingPage(driver, wait);
 
-		Assert.assertTrue(
-				lp.gettitle().equals("Pet Food, Products, Supplies at Low Prices - Free Shipping | Chewy.com"));
+		//Assert.assertTrue(				lp.gettitle().equals("Pet Food, Products, Supplies at Low Prices - Free Shipping | Chewy.com"));
 
-		org.testng.Assert.assertEquals(10, lp.getdefaultSugesstionCount());
+//		org.testng.Assert.assertEquals(10, lp.getdefaultSugesstionCount());
 	}
 
-	@Test(dataProvider = "getDatafromexcel")
+//	@Test(dataProvider = "getDatafromexcel")
 	public void verifyLoginfunctionality(String runMode, String username, String password, String user) {
-
+/*
 		if (runMode.equals("Y")) {
+			
 			landingPage lp = new landingPage(driver, wait);
 			loggedInHomePage lhp = new loggedInHomePage(driver, wait);
 
@@ -32,9 +36,12 @@ public class testCases extends TestBase {
 
 			lp.login(username, password);
 			Assert.assertEquals("Welcome back, " + user + "!", lhp.getWelcomeText());
+			
+			
 		} else {
+		
 			throw new SkipException(currentTestCase + "Skipped with username  " + username);
-		}
+		}*/
 	}
 
 }

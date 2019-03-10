@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="page.object.model.tests.dynamicXpathTest">
+      <class name="page.object.model.tests.testCases">
         <methods>
           <include name="verifyLandingpagefeatures"/>
-          <include name="initSuite"/>
-          <include name="quit"/>
-          <include name="initTest"/>
         </methods>
-      </class> <!-- page.object.model.tests.dynamicXpathTest -->
+      </class> <!-- page.object.model.tests.testCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -9,7 +9,9 @@ public class ReflectionAPI {
 		//sampleTest("xxxXX");
 			String x="sampleTest";
 			//String meth=read name from xls file
-			Method method= ReflectionAPI.class.getMethod(x, String.class);
+			Class myclass= advance.ReflectionAPI.class;
+			Method method= myclass.getMethod(x, String.class);
+			
 			method.invoke(method, "hello");
 			
 			
@@ -17,6 +19,12 @@ public class ReflectionAPI {
 		}
 		
 		public static void sampleTest(String x){
+			
+
+			String name = new Object(){}.getClass().getEnclosingMethod().getName();
+			
+			
+			//LOG.INFO("CURRENTLY EXECUTONG ": name))
 			System.out.println("in sample test-- "+x);
 		}
 

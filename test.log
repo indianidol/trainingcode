@@ -1,5 +1,6 @@
-2019-02-25 13:03:54 DEBUG log4jExample:32 - This is debug : 
-2019-02-25 13:03:54 INFO  log4jExample:35 - This is info : 
-2019-02-25 13:03:54 WARN  log4jExample:37 - This is warn : 
-2019-02-25 13:03:54 ERROR log4jExample:38 - This is error : 
-2019-02-25 13:03:54 FATAL log4jExample:39 - This is fatal : 
+2019-03-04 18:19:04 DEBUG log4jExample:33 - This is debug : 
+2019-03-04 18:19:04 INFO  log4jExample:36 - This is info : 
+2019-03-04 18:19:04 INFO  log4jExample:39 - This is Info : 
+2019-03-04 18:19:04 WARN  log4jExample:40 - This is warn : 
+2019-03-04 18:19:04 ERROR log4jExample:41 - This is error : 
+2019-03-04 18:19:04 FATAL log4jExample:42 - This is fatal :

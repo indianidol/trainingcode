@@ -33,7 +33,7 @@ public class BrowserManger extends CommonVariables {
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(10000l, TimeUnit.SECONDS);
-			registerListner();		
+		//	registerListner();		
 			wait = new WebDriverWait(driver, 30);
 			return driver;
 			

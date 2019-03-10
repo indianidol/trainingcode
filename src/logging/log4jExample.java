@@ -22,6 +22,7 @@ public class log4jExample{
 	public static void main(String[] args) throws IOException {
 		
 		Level l = Level.ALL;
+		
 		RootLogger rl=  new RootLogger(l);
 		RollingFileAppender ra=		new RollingFileAppender();
 		ra.setFile(System.getProperty("user.dir")+"\\test.log",true,true,50000);
@@ -29,11 +30,12 @@ public class log4jExample{
 		ra.setLayout(la);	
 		logger.addAppender(ra);	
 		if(logger.isDebugEnabled()){
-			logger.debug("This is debug : " );
+			logger.debug("OK now I am debugging" );
 		}
 		if(logger.isInfoEnabled()){
 			logger.info("This is info : ");
-		}
+		}		
+		logger.info("This is Info : " );
 		logger.warn("This is warn : " );
 		logger.error("This is error : ");
 		logger.fatal("This is fatal : ");

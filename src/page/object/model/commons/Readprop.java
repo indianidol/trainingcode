@@ -19,8 +19,10 @@ public class Readprop extends CommonVariables{
 			browser= configProp.getProperty("browser");			
 			xlspath= System.getProperty("user.dir")+configProp.getProperty("xlsfile");
 			testDataSheet=configProp.getProperty("testDataSheet");
+			
+			//future
 			screenshotFolderPath=configProp.getProperty("ScreenShotsfolder");
-			reportpath=CommonFunctions.getcurrentdateandhour()+System.getProperty("user.dir")+configProp.getProperty("reportpath");
+			reportpath=System.getProperty("user.dir")+configProp.getProperty("reportpath");
 			
 		} catch (Exception e) {
 			e.printStackTrace();

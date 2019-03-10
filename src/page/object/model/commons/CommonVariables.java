@@ -22,11 +22,12 @@ public class CommonVariables {
 
 	public BrowserManger bM;
 	public static String xlspath;
-	public static Xls_Reader xls;
-
-	
+	public static Xls_Reader xls;	
 	public static String testDataSheet;
+	
 	public static String currentTestCase;
+	
+	
 	EventFiringWebDriver eventHandler;
 	MyListener eCapture;
 	
