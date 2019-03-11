@@ -1,6 +1,8 @@
 package page.object.model.tests;
 
 import java.lang.reflect.Method;
+import java.util.Hashtable;
+import java.util.LinkedHashMap;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -24,7 +26,7 @@ public class testCases extends TestBase {
 //		org.testng.Assert.assertEquals(10, lp.getdefaultSugesstionCount());
 	}
 
-	@Test(dataProvider = "getDatafromexcel")
+//	@Test(dataProvider = "getDatafromexcel")
 	public void verifyLoginfunctionality(String runMode, String username, String password, String user) {
 
 		if (runMode.equals("Y")) {
@@ -44,4 +46,24 @@ public class testCases extends TestBase {
 		}
 	}
 
+	
+	@Test(dataProvider = "getDatainmap")
+	public void VerifyReport(LinkedHashMap<String, String> dataset) {
+
+		
+			
+			landingPage lp = new landingPage(driver, wait);
+			loggedInHomePage lhp = new loggedInHomePage(driver, wait);
+
+			// lp.login("Cignitiracqa@gmail.com", "India@123");
+
+		//	lp.login(username, password);
+	//		Assert.assertEquals("Welcome back, " + user + "!", lhp.getWelcomeText());
+			
+			
+		/*} else {
+		
+			throw new SkipException(currentTestCase + "Skipped with username  " + username);
+		}*/
+	}
 }

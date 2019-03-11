@@ -3,6 +3,7 @@ package page.object.model.tests;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Hashtable;
+import java.util.LinkedHashMap;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -88,7 +89,11 @@ public class TestBase extends CommonVariables {
 		return data;
 		
 	}
-	
+	@DataProvider(name = "getDatainmap")	
+	public static Object[][] getDatafrom1(){
+	return	getTestData("VerifyReport",xls);
+		
+	}
 	public static Object[][] getTestData(String testName, Xls_Reader xls){
 		// find the row Number of the testcase
 		int testStartRowNum=1;
@@ -115,20 +120,20 @@ public class TestBase extends CommonVariables {
 		
 		// read the data
 		dataStartRowNumber=testStartRowNum+2;
-		Hashtable<String,String> table=null;
+		LinkedHashMap<String,String> linkedHmap=null;
 		int finalRows = dataStartRowNumber+totalRows;
 		Object[][] myData = new Object[totalRows][1];
 		int i=0;
 		for(int rNum=dataStartRowNumber;rNum<finalRows;rNum++){
-			table = new Hashtable<String,String>();
+			linkedHmap = new LinkedHashMap<String,String>();
 			for(int cNum=0;cNum<totalCols;cNum++){// put data in hashtable
 				String data = xls.getCellData("Data", cNum, rNum);
 				String key = xls.getCellData("Data", cNum, colStartRowNum);
-				//System.out.println(key+" --- "+data);
-				table.put(key, data);
+				System.out.println("Key " +key+" --- "+"  Data "+data);
+				linkedHmap.put(key, data);
 			}
-			System.out.println(table);
-			myData[i][0]=table;
+			System.out.println(linkedHmap);
+			myData[i][0]=linkedHmap;
 			i++;
 			System.out.println("----------------");
 		}
