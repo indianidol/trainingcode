@@ -5,7 +5,9 @@
     <classes>
       <class name="page.object.model.tests.testCases">
         <methods>
-          <include name="verifyLandingpagefeatures"/>
+          <include name="initSuite"/>
+          <include name="VerifyReport"/>
+          <include name="initTest"/>
         </methods>
       </class> <!-- page.object.model.tests.testCases -->
     </classes>

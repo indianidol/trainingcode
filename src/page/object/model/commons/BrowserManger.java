@@ -18,7 +18,7 @@ public class BrowserManger extends CommonVariables {
 	}
 
 	public BrowserManger(String browser, String url) {
-		this.browser = browser;
+	//	this.browser = browser;
 		getDriver();
 		navigate(url);
 	}
@@ -63,6 +63,6 @@ public class BrowserManger extends CommonVariables {
 	}
 
 	private void navigate(String url) {
-		driver.get(configProp.getProperty(url));
+		driver.get(url);
 	}
 }

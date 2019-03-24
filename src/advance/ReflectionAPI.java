@@ -10,10 +10,13 @@ public class ReflectionAPI {
 			String x="sampleTest";
 			//String meth=read name from xls file
 			Class myclass= advance.ReflectionAPI.class;
-			Method method= myclass.getMethod(x, String.class);
+			Method mymethod= myclass.getMethod(x, String.class);
 			
-			method.invoke(method, "hello");
+	//		advance.ReflectionAPI.class.getMethod(x);
 			
+			mymethod.invoke(mymethod, "hello");
+			
+	
 			
 	        System.out.println("end");
 		}

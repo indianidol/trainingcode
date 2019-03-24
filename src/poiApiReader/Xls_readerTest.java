@@ -11,7 +11,7 @@ public class Xls_readerTest
 
 		Xls_Reader xls = new Xls_Reader(xlspath);
 
-		String SheetName = "TestData";
+		String SheetName = "TestCases";
 
 		int columnCount = xls.getColumnCount(SheetName);
 

@@ -31,6 +31,7 @@ public class TestBase extends CommonVariables {
 		rp = new Readprop();
 		rp.getproperties();
 		xls = new Xls_Reader(xlspath);
+		extent = ExtentManager.getInstance(reportpath);
 	}
 	
 	
@@ -40,19 +41,18 @@ public class TestBase extends CommonVariables {
 		bM = new BrowserManger();
 		currentTestCase= method.getName();
 		
-		rep = ExtentManager.getInstance(reportpath);
-		test = rep.createTest(currentTestCase);
+		test = extent.createTest(currentTestCase);
 		
 		
 	}
 
-	//@AfterMethod
+	@AfterMethod
 	public void quit() throws IOException {
 		driver.quit();
 		Runtime.getRuntime().exec("taskkill /im chromedriver.exe /f");
 		
-		if(rep!=null)
-			rep.flush();
+		if(extent!=null)
+			extent.flush();
 	
 	}
 	@DataProvider(name = "getDatafromexcel")

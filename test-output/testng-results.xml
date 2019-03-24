@@ -2,37 +2,41 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21888" started-at="2019-03-07T00:56:25Z" finished-at="2019-03-07T00:56:47Z">
+  <suite name="Default suite" duration-ms="567552" started-at="2019-03-14T00:14:25Z" finished-at="2019-03-14T00:23:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21888" started-at="2019-03-07T00:56:25Z" finished-at="2019-03-07T00:56:47Z">
+    <test name="Default test" duration-ms="567552" started-at="2019-03-14T00:14:25Z" finished-at="2019-03-14T00:23:53Z">
       <class name="page.object.model.tests.testCases">
-        <test-method status="PASS" signature="initSuite()[pri:0, instance:page.object.model.tests.testCases@7823a2f9]" name="initSuite" is-config="true" duration-ms="725" started-at="2019-03-06T18:56:24Z" finished-at="2019-03-06T18:56:25Z">
+        <test-method status="PASS" signature="initSuite()[pri:0, instance:page.object.model.tests.testCases@78e117e3]" name="initSuite" is-config="true" duration-ms="16532" started-at="2019-03-13T19:14:09Z" finished-at="2019-03-13T19:14:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSuite -->
-        <test-method status="PASS" signature="initTest(java.lang.reflect.Method)[pri:0, instance:page.object.model.tests.testCases@7823a2f9]" name="initTest" is-config="true" duration-ms="21864" started-at="2019-03-06T18:56:25Z" finished-at="2019-03-06T18:56:47Z">
+        <test-method status="PASS" signature="initTest(java.lang.reflect.Method)[pri:0, instance:page.object.model.tests.testCases@78e117e3]" name="initTest" is-config="true" duration-ms="515683" started-at="2019-03-13T19:14:25Z" finished-at="2019-03-13T19:23:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void page.object.model.tests.testCases.verifyLandingpagefeatures(java.lang.reflect.Method)]]>
+                <![CDATA[public void page.object.model.tests.testCases.VerifyReport(java.util.LinkedHashMap) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initTest -->
-        <test-method status="PASS" signature="verifyLandingpagefeatures(java.lang.reflect.Method)[pri:0, instance:page.object.model.tests.testCases@7823a2f9]" name="verifyLandingpagefeatures" duration-ms="10" started-at="2019-03-06T18:56:47Z" finished-at="2019-03-06T18:56:47Z">
+        <test-method status="PASS" signature="VerifyReport(java.util.LinkedHashMap)[pri:0, instance:page.object.model.tests.testCases@78e117e3]" name="VerifyReport" duration-ms="49586" started-at="2019-03-13T19:23:01Z" data-provider="getDatainmap" finished-at="2019-03-13T19:23:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void page.object.model.tests.testCases.verifyLandingpagefeatures(java.lang.reflect.Method)]]>
+                <![CDATA[{Runmode=Y, Username=Cignitiracqa@gmail.com, Password=India@123, ExpectedResult=cigniti}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLandingpagefeatures -->
+        </test-method> <!-- VerifyReport -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:page.object.model.tests.testCases@78e117e3]" name="quit" is-config="true" duration-ms="2241" started-at="2019-03-13T19:23:51Z" finished-at="2019-03-13T19:23:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
       </class> <!-- page.object.model.tests.testCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

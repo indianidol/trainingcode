@@ -7,10 +7,10 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ExtentManager {
+public class ExtentManager extends CommonVariables{
     
-    private static ExtentReports extent;
-    public static String screenshotFolderPath;
+   
+  
     
     public static ExtentReports getInstance(String reportPath) {
     	if (extent == null){

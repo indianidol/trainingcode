@@ -34,6 +34,6 @@ public class CommonVariables {
 	public static String reportpath;
 	public static String screenshotFolderPath;
 	
-	public ExtentReports rep;
+	 public static ExtentReports extent;
 	public ExtentTest test;
 }
