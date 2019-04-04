@@ -42,7 +42,7 @@ System.out.println("Starting IEDriverServer ");
 		}
 	}
 /*	@Test
-	public void zgetdata() {
+	public void zgetdata() x{
 		System.out.println("Driver "+driver.getWindowHandle());
 	}
 */
