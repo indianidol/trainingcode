@@ -35,8 +35,8 @@ public class JodaTimeExample {
 	    hour24 = cal.get(Calendar.HOUR_OF_DAY); // 0..23
 		
 	
-	/*LocalDateTime date = LocalDateTime.now();
-	ZonedDateTime zdt=date.atZone(ZoneId.of("CST")) ;
+	LocalDateTime date = LocalDateTime.now();
+	ZonedDateTime zdt=date.atZone(ZoneId.of("CST"));
 
 //	date.atZone(zone)
 	DateTimeFormatter fmt = DateTimeFormatter.ofPattern("MMMM dd, yyyy HH:mm");
@@ -47,7 +47,7 @@ System.out.println(zdt.getZone());
 	
 	String str = zdt.format(fmt);
 	System.out.println(str);
-*/
+
 	/*SimpleDateFormat isoFormat = new SimpleDateFormat("MMMM dd, yyyy HH:mm");
 	isoFormat.setTimeZone(TimeZone.getTimeZone("CST"));
 	Date date = new Date();

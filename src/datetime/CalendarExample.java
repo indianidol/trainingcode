@@ -4,6 +4,10 @@ package datetime;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -21,6 +25,15 @@ public class CalendarExample {
         Date date = formatter.parse(dateInString);
         TimeZone tz = TimeZone.getDefault();
 
+        ZoneId singaporeZoneId = ZoneId.of("Asia/Singapore");
+        System.out.println("TimeZone : " + singaporeZoneId);
+        
+        LocalDateTime ldt = LocalDateTime.parse(dateInString, DateTimeFormatter.ofPattern(DATE_FORMAT));
+
+        //LocalDateTime + ZoneId = ZonedDateTime
+        ZonedDateTime asiaZonedDateTime = ldt.atZone(singaporeZoneId);
+        System.out.println("Date (Singapore) : " + asiaZonedDateTime);
+        
         // From TimeZone Asia/Singapore
         System.out.println("TimeZone : " + tz.getID() + " - " + tz.getDisplayName());
         System.out.println("TimeZone : " + tz);
