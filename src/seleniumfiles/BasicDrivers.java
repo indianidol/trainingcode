@@ -1,15 +1,23 @@
 package seleniumfiles;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.Test;
 // automation -  stable projects - functional phase
 
 public class BasicDrivers {
+	WebDriver driver ;
+	String url ;
 	/*public static void main(String[] args) {
 
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\drivers\\chromedriver.exe");
@@ -21,13 +29,13 @@ public class BasicDrivers {
 	
 	@Test
 	public void launchSite() throws InterruptedException{	
-		String url = "https://www.rediff.com";
+	/*	 url = "https://www.rediff.com";
 		
-	/*	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\drivers\\chromedriver.exe");
 		//System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, System.getProperty("user.dir")+"\\drivers\\chromedriver.exe");
 		
 		
-		ChromeDriver driver = new ChromeDriver();
+		 driver = new ChromeDriver();
 	//	cd.get(url);	
 		driver.manage().window().maximize();
 //		driver.manage().window().fullscreen();
@@ -40,8 +48,8 @@ public class BasicDrivers {
 	
 	
 	
-	System.out.println(wes.size());
-	*/
+	System.out.println(wes.size());*/
+		
 	
 	
 	
@@ -74,19 +82,18 @@ public class BasicDrivers {
 		
 	//https://ftp.mozilla.org/pub/firefox/releases/
 	// timeout 45000 -  binary of firefox not found
-		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\drivers\\geckodriver.exe");
-		File pathToBinary = new File("C:/Users/Ramkar/AppData/Local/Mozilla Firefox/firefox.exe");
+//		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\drivers\\geckodriver.exe");
+		/*File pathToBinary = new File("C:/Users/Ramkar/AppData/Local/Mozilla Firefox/firefox.exe");
 		FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
-		FirefoxProfile firefoxProfile = new FirefoxProfile();   
-		
-		
+		FirefoxProfile firefoxProfile = new FirefoxProfile();
 		 FirefoxOptions options = new FirefoxOptions()
 			      .addPreference("browser.startup.page", 1)
-			      .addPreference("browser.startup.homepage", "https://www.rediff.com").setBinary(ffBinary)
+			      .addPreference("browser.startup.homepage", "https://www.rediff.com").setBinary(ffBinary)*/
 			      ;	
 		 
 		 
-		WebDriver driver = new FirefoxDriver(options);	
+	//	 driver = new FirefoxDriver(options);	
+		 
 		
 	//	FirefoxDriver driver = new FirefoxDriver();
 		
@@ -117,7 +124,7 @@ public class BasicDrivers {
 		
 	//********************************************************************************************
 		
-	/*	
+		
 		// IE
 		// zoom level 100%
 		// protected mode turned off and level to least positions
@@ -125,7 +132,7 @@ public class BasicDrivers {
 		// 32 or 64
 	
 			
-		String url = "https://www.google.com";
+		url = "https://www.google.com";
 		System.setProperty("webdriver.ie.driver",  System.getProperty("user.dir")+"\\drivers\\IEDriverServer.exe");
 		//System.setProperty(InternetExplorerDriverService.IE_DRIVER_EXE_PROPERTY, "D:\\Common\\drivers\\IEDriverServer.exe");
 		InternetExplorerDriver ie = new InternetExplorerDriver();
@@ -140,7 +147,7 @@ public class BasicDrivers {
 		
 	//	ie.findElementByXPath(xpath).sendKeys(Keys.ENTER);
 		
-		ie.findElementByXPath(xpath).sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);*/
+	//	ie.findElementByXPath(xpath).sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
 		
 		//********************************************************************************************
 		
