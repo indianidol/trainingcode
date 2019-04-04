@@ -4,8 +4,18 @@ package basics;
 public class space implements universe{
 	
 	
-	int stars=5;
-	
+private	int stars=5;
+public int getStars() {
+	return stars;
+}
+public void setStars(int stars) {
+	this.stars = stars;
+}
+
+
+public int moon=2;
+
+
 		public void revolve() {
 			
 			

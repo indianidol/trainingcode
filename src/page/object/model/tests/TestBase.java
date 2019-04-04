@@ -39,8 +39,7 @@ public class TestBase extends CommonVariables {
 	@BeforeMethod
 	public void initTest(Method method) {		
 		bM = new BrowserManger();
-		currentTestCase= method.getName();
-		
+		currentTestCase= method.getName();		
 		test = extent.createTest(currentTestCase);
 		
 		
@@ -48,8 +47,9 @@ public class TestBase extends CommonVariables {
 
 	@AfterMethod
 	public void quit() throws IOException {
-		driver.quit();
-		Runtime.getRuntime().exec("taskkill /im chromedriver.exe /f");
+		if(driver!=null)
+	//	driver.quit();
+	//	Runtime.getRuntime().exec("taskkill /im chromedriver.exe /f");
 		
 		if(extent!=null)
 			extent.flush();
@@ -90,8 +90,8 @@ public class TestBase extends CommonVariables {
 		
 	}
 	@DataProvider(name = "getDatainmap")	
-	public static Object[][] getDatafrom1(){
-	return	getTestData("VerifyReport",xls);
+	public static Object[][] getDatafrom1(Method m){
+	return	getTestData(m.getName(),xls);
 		
 	}
 	public static Object[][] getTestData(String testName, Xls_Reader xls){

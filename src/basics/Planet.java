@@ -1,9 +1,9 @@
 package basics;
 public class Planet extends space {
 
-	String name;
+	/* String name;
 	int moons;
-	
+	*/
 	// Constructors
 	// there no return type
 	// name has to be same as class name
@@ -14,10 +14,10 @@ public class Planet extends space {
 	// overloading
 	public Planet(String name,int moons, int stars){
 		//super();
-		
+		/*
 		super(stars);
 		this.name=name;
-		this.moons=moons;
+		this.moons=moons;*/
 	}
 	public void revolve() {
 		
@@ -27,11 +27,16 @@ public class Planet extends space {
 	public static void main(String[] args) {
 
 		
-		Planet mercurty = new Planet("mercury",0,2);		
+		space m = new Planet();
+		m.setStars(9);
 		
 		
-mercurty.revolve();
 		
+		
+		
+		/*Planet mercurty = new Planet("mercury",0,2);
+		mercurty.revolve();
+		*/
 	/*	System.out.println(mercurty.name);
 		System.out.println("Moon "+mercurty.moons);*/
 		/*Planet p4 = new Planet("Pluto",4,8);
@@ -46,5 +51,5 @@ mercurty.revolve();
 		
 		
 	}
-
+	
 }

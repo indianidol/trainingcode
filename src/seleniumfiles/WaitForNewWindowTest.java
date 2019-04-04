@@ -1,4 +1,4 @@
-package seleniumfiles;
+/*package seleniumfiles;
 
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -69,14 +69,14 @@ public class WaitForNewWindowTest {
         		   switchToWindow(driver,expectedtitle);
         		   break;
         		   
-        		 /*  for(String s:setDifference(allWindowHandles,allpreviousWindowHandles)){
+        		   for(String s:setDifference(allWindowHandles,allpreviousWindowHandles)){
         			   driver.switchTo().window(s);
         			   String title=driver.getTitle();
         			   if(title.equals(expectedtitle)){
         				   driver.switchTo().window(s);
         				   newWindowHandle=s;
         			   }
-        		   }*/
+        		   }
         	   }
             
         	    else {
@@ -107,14 +107,14 @@ public class WaitForNewWindowTest {
         		   
         		   switchToWindow(driver,expectedtitle);
         		   
-        		 /*  for(String s:setDifference(allWindowHandles,allpreviousWindowHandles)){
+        		   for(String s:setDifference(allWindowHandles,allpreviousWindowHandles)){
         			   driver.switchTo().window(s);
         			   String title=driver.getTitle();
         			   if(title.equals(expectedtitle)){
         				   driver.switchTo().window(s);
         				   newWindowHandle=s;
         			   }
-        		   }*/
+        		   }
         	   }
             
         	    else {
@@ -149,3 +149,4 @@ public class WaitForNewWindowTest {
     }
 }
 
+*/

@@ -33,7 +33,10 @@ public class testCases extends TestBase {
 //	@Test(dataProvider = "getDatafromexcel")
 	public void verifyLoginfunctionality(String runMode, String username, String password, String user) {
 
-		if (runMode.equals("Y")) {
+		System.out.println(runMode +"---- "+username +"---- "+password+"---- "+ user);
+		
+		
+		/*if (runMode.equals("Y")) {
 			
 			landingPage lp = new landingPage(driver, wait);
 			loggedInHomePage lhp = new loggedInHomePage(driver, wait);
@@ -49,7 +52,7 @@ public class testCases extends TestBase {
 		} else {
 		
 			throw new SkipException(currentTestCase + "Skipped with username  " + username);
-		}
+		}*/
 	}
 //	@Test
 	public static void testss() {
