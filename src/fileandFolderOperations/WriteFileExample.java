@@ -1,4 +1,4 @@
-package fileOperations;
+package fileandFolderOperations;
 
 import java.io.File;
 import java.io.FileOutputStream;

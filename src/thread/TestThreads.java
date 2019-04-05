@@ -5,7 +5,7 @@ public class TestThreads {
 	public static void main(String[] args) {
 		
 	
-	SharedUtil util = new SharedUtil();
+	final SharedUtil util = new SharedUtil();
 	
 	Thread t1 = new Thread(()->{		util.setTableFor(3);		util.printMultiplicationTable();	});
 	t1.setName("Thread 1 : ");
